@@ -1,14 +1,18 @@
-<h1>Surprisingly complex to implement RSS feed</h1>
-<ul class="list-group">
-    <div *ngFor="let result of results">
-      <li>
-          <button class="btn btn-danger" (click)="deleteEntry(result)">Delete</button>
-          <a href="{{result.link}}">  {{result.title}}</a>
-          <br> {{result.pubDate}}
-      </li>  
-      <br>
-    </div>
-    <button class="btn btn-primary" (click)="feedMe()">Feed Me</button>
-</ul>
+<section class="clearmargin">
+    <h1>{{title}}</h1>
+    <ul class="list-group">
+        <input type="text" (keyup.enter)="feedMe()">
+        <div *ngFor="let result of results">
+          <li>
+              <button class="btn btn-danger" (click)="deleteEntry(result)">Delete</button>
+              <a href="{{result.link}}">  {{result.title}}</a>
+              <br> {{result.pubDate}}
+          </li>  
+          <br>
+        </div>
+        <button class="btn btn-primary" (click)="feedMe()">Feed Me</button>
+    </ul>
+</section>
+
 
 
